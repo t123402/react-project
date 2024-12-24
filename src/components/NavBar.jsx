@@ -11,6 +11,20 @@ function NavBar() {
 		setUser(null);
 	};
 
+	const welcomeMessage = (user) => {
+		if (!user) return "歡迎光臨本站！";
+		const genderTitle =
+			user.gender === "M"
+				? "先生"
+				: user.gender === "F"
+				? "小姐"
+				: "會員";
+		if (user.roleid === "1" || user.roleid === "2")
+			return `恭迎 ${user.rolename} ${user.nickname} 回歸本站！`;
+		const displayName = user.nickname || user.username; // 如果 nickname 不存在則使用 username
+		return `你好 ${displayName} ${genderTitle}，歡迎回來！`;
+	};
+
 	if (loading) return null; // 加載中時不顯示 NavBar
 
 	return (
@@ -18,7 +32,7 @@ function NavBar() {
 			<div className="container mx-auto flex items-center justify-between">
 				{/* 左側歡迎訊息 */}
 				<div className="text-lg font-semibold">
-					{user ? `${user.nickname}，歡迎回來！` : "歡迎光臨！"}
+					{welcomeMessage(user)}
 				</div>
 
 				{/* 右側連結 */}
