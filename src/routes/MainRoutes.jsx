@@ -6,6 +6,7 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import ItemsPage from "../pages/ItemsPage";
 import CounterPage from "../pages/CounterPage";
+import ProfilePage from "../pages/ProfilePage";
 
 function MainRoutes() {
 	return (
@@ -19,6 +20,14 @@ function MainRoutes() {
 				element={
 					<ProtectedRoute>
 						<ItemsPage />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path="/profile"
+				element={
+					<ProtectedRoute>
+						<ProfilePage />
 					</ProtectedRoute>
 				}
 			/>

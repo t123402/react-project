@@ -57,12 +57,20 @@ function NavBar() {
 					</Link>
 					{user ? (
 						// 已登入時顯示「登出」
-						<button
-							onClick={handleLogout}
-							className="hover:text-green-900 transition-colors"
-						>
-							登出
-						</button>
+						<>
+							<Link
+								to="/profile"
+								className="hover:text-green-900 transition-colors"
+							>
+								會員資料
+							</Link>
+							<button
+								onClick={handleLogout}
+								className="hover:text-green-900 transition-colors"
+							>
+								登出
+							</button>
+						</>
 					) : (
 						// 未登入時顯示「登入」和「註冊」
 						<>
