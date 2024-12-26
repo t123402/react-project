@@ -14,9 +14,11 @@ function AboutPage() {
 				</h1>
 				<div className="flex items-center justify-between mb-6">
 					<p>
-						這是一個用 Go 語言開發的簡單 HTTP
-						Server。它可以處理靜態頁面顯示和 API
-						請求，並與資料庫進行交互，實現基本的 CRUD 操作。
+						這是一個以 Go 語言開發的後端 HTTP Server，搭配 React
+						作為前端框架，並採用了 Tailwind CSS 來設計樣式。
+						物品管理：支援基本的 CRUD 操作。
+						會員系統：提供簡單的會員註冊、登入、資料管理、修改密碼等功能。
+						這是一個小型的全端專案，展示了後端開發與前端整合的能力。
 					</p>
 				</div>
 				<div className="text-center items-center mt-4">

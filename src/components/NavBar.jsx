@@ -24,6 +24,8 @@ function NavBar() {
 				: "會員";
 		if (user.roleid === "1" || user.roleid === "2")
 			return `恭迎 ${user.rolename} ${user.nickname} 回歸本站！`;
+		if (user.roleid === "3")
+			return `歡迎超強的 ${user.rolename} ${user.nickname} 視察本站！`;
 		const displayName = user.nickname || user.username; // 如果 nickname 不存在則使用 username
 		return `你好 ${displayName} ${genderTitle}，歡迎回來！`;
 	};
