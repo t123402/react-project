@@ -7,6 +7,7 @@ import RegisterPage from "../pages/RegisterPage";
 import ItemsPage from "../pages/ItemsPage";
 import CounterPage from "../pages/CounterPage";
 import ProfilePage from "../pages/ProfilePage";
+import ChangePasswordPage from "../pages/ChangePasswordPage";
 
 function MainRoutes() {
 	return (
@@ -28,6 +29,14 @@ function MainRoutes() {
 				element={
 					<ProtectedRoute>
 						<ProfilePage />
+					</ProtectedRoute>
+				}
+			/>
+			<Route
+				path="/change-password"
+				element={
+					<ProtectedRoute>
+						<ChangePasswordPage />
 					</ProtectedRoute>
 				}
 			/>
